@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Issue Tracker | Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body >
+    <div class="flex justify-center items-center min-h-screen bg-gray-100">
+            <form class="mx-auto" id="loginForm">
+        <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+            <div class="p-5 ">
+<img class="mx-auto" src="./assets/github-logo.png" alt="">
+  <h2 class="text-center font-bold text-xl">GitHub Issues Tracker</h2>
+  <p class="text-center ">Sign in to manage your issues</p>
+            </div>
+  
+
+  <label class="label">Username</label>
+  <input type="text" id="username" class="input"  placeholder="Enter Username" />
+
+  <label class="label">Password</label>
+  <input  id="password" type="password" class="input" placeholder="Enter Password" />
+
+  <button onclick="login()" class="btn btn-primary mt-4">Sign In</button>
+ <div class="text-center">
+     <p class=" p-5">Or</p>
+  <p class=" text-gray-500">Demo Credentials</p>
+ <div class="bg-gray-100">
+     <p class="p-5"><span class="font-bold">Username</span>: admin <br>
+
+<span class="font-bold">Password</span>: admin123</p>
+ </div>
+ </div>
+</fieldset>
+    </form>
+    </div>
+ <script src="./script.js"> </script>
+</body>
+</html>
