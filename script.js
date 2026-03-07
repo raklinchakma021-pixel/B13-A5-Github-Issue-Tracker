@@ -17,12 +17,12 @@ form.addEventListener("submit", function(e){
 
 
 
-// protect page
-if(localStorage.getItem("auth")!=="true"){
 
-window.location.href="login.html"
 
+if(!localStorage.getItem("isLoggedIn")){
+    window.location.href = "login.html";
 }
+
 
 
 
@@ -64,7 +64,11 @@ document.getElementById("issueCount").innerText=
 
 }
 
-
+function getPriorityColor(priority){
+  if(priority === "high") return "bg-red-50 text-red-400";
+  if(priority === "medium") return "bg-yellow-50 text-yellow-500";
+  return "bg-gray-100 text-gray-500";
+}
 
 // render cards
 function renderIssues(list){
@@ -85,7 +89,10 @@ container.innerHTML+=`
 
 <div class="bg-white p-4 rounded shadow ${border}">
 
-<img src="./assets/Open-Status.png">
+<div class="flex justify-between mb-2">
+<img class="w-10" src="./assets/Open-Status.png"/>
+<button class="${getPriorityColor(issue.priority)} px-8 text-sm font-bold rounded-full uppercase py-2">${issue.priority}</button>
+</div>
 <h2 
 class="font-bold text-blue-600 cursor-pointer">
 
@@ -122,4 +129,6 @@ btn.classList.add("outline")
 }
 
 
-loadIssues("all");
+window.onload = () => {
+  document.getElementById("allTab").click();
+};
