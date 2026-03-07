@@ -13,22 +13,35 @@
     <nav class="bg-white shadow p-4 flex justify-between items-center">
 
 <h1 class="text-xl font-bold">Github Issues Tracker</h1>
-
+<!-- 
 <div class="flex gap-2">
 <div class="relative ">
   <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
     <i class="fas fa-magnifying-glass"></i>
   </span>
-  <input id="searchInput" type="text" placeholder="Search issues..." 
+  <input id="input-search" type="text" placeholder="Search issues..." 
          class="border p-2 pl-10 rounded w-full" />
 </div>
 
-<button onclick="searchIssue()"
+<button id="btn-search"
 class="bg-blue-500 text-white px-3 rounded"><i class="fa-solid fa-plus"></i>
 New Issues
 </button>
 
+</div> -->
+
+
+    <div class="join">
+  <div>
+    <label class="input join-item">
+   <i class="fas fa-magnifying-glass"></i>
+      <input type="text" id="input-search" placeholder="Search Issues.."/>
+    </label>
+   
+  </div>
+  <button id="btn-search" class="btn btn-neutral join-item">New Issues</button>
 </div>
+
 
 </nav>
 
@@ -44,7 +57,9 @@ New Issues
 
     <div id="issueCount" class="mb-4 font-semibold"></div>
 
-  
+  <div id="spinner" class="flex justify-center items-center py-10 hidden">
+    <span class="loading loading-bars loading-xl"></span>
+  </div>
 <div id="issuesContainer"
 class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 </div>
@@ -52,6 +67,23 @@ class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 
 
 </div>
+
+<!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+<dialog id="info_modal" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <div id="details-container">
+  
+    </div>
+   
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn btn-primary">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
 
 <script src="./script.js"></script>
 </body>
