@@ -8,7 +8,7 @@ form.addEventListener("submit", function(e){
 
     if(username === "admin" && password === "admin123"){
         localStorage.setItem("isLoggedIn", "true");
-        window.location.href = "index.html";
+        window.location.href = "loggedin.html";
     } else {
         alert("Invalid Credentials");
     }
@@ -19,9 +19,6 @@ form.addEventListener("submit", function(e){
 
 
 
-if(!localStorage.getItem("isLoggedIn")){
-    window.location.href = "login.html";
-}
 
 
 
