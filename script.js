@@ -154,8 +154,8 @@ ${issue.description.substring(0,80)}...
 <button class="text-xs mt-2 bg-red-200 text-red-400 px-3 py-2 rounded-full font-bold uppercase"> <i class="fa-solid fa-bug"></i>${issue.labels[0]}</button>
 <button class="text-xs mt-2 bg-yellow-200 text-yellow-600 px-3 py-2 rounded-full font-bold uppercase"><i class="fa-solid fa-circle-radiation"></i> ${issue.labels[1]}</button>
 </div>
-<p class="text-xs py-2">#1 ${issue.author}</p>
-<p class="text-xs"> ${issue.createdAt}</p>
+<p class="text-xs py-2 capitalize">#1 ${issue.author.replace("_", " ")}</p>
+<p class="text-xs"> ${issue.createdAt.split("T")[0]}</p>
 
 
 </div>
