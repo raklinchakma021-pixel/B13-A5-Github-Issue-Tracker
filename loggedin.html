@@ -10,25 +10,9 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="bg-white shadow p-4 flex justify-between items-center">
+    <nav class="bg-white shadow p-4 flex flex-col md:flex-row justify-between items-center">
 
-<h1 class="text-xl font-bold">Github Issues Tracker</h1>
-<!-- 
-<div class="flex gap-2">
-<div class="relative ">
-  <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
-    <i class="fas fa-magnifying-glass"></i>
-  </span>
-  <input id="input-search" type="text" placeholder="Search issues..." 
-         class="border p-2 pl-10 rounded w-full" />
-</div>
-
-<button id="btn-search"
-class="bg-blue-500 text-white px-3 rounded"><i class="fa-solid fa-plus"></i>
-New Issues
-</button>
-
-</div> -->
+<h1 class="text-xl font-bold mb-2 md:mb-0">Github Issues Tracker</h1>
 
 
     <div class="join">
@@ -39,7 +23,7 @@ New Issues
     </label>
    
   </div>
-  <button id="btn-search" class="btn btn-neutral join-item">New Issues</button>
+  <button id="btn-search" class="btn btn-primary join-item mx-2"><i class="fa-solid fa-plus"></i>New Issues</button>
 </div>
 
 
@@ -70,8 +54,8 @@ class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 
 <!-- Open the modal using ID.showModal() method -->
 <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
-<dialog id="info_modal" class="modal modal-bottom sm:modal-middle">
-  <div class="modal-box">
+<dialog id="info_modal" class="modal  modal-middle md:modal-middle">
+  <div class="modal-box max-w-sm md:max-w-xl">
     <div id="details-container">
   
     </div>
