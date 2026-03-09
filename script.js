@@ -44,14 +44,14 @@ renderIssues(filtered)
 
 
 document.getElementById("issueCount").innerHTML=
-`<div class="flex justify-between my-8 shadow-sm px-5 py-5 items-center">
+`<div class="flex flex-col md:flex-row justify-between my-8 shadow-sm px-5 py-5 items-center">
 <div class="flex items-center gap-5 ">
 <img class="bg-purple-200 p-2 rounded-full" src="./assets/Aperture.png">
 <p class="text-gray-400"><span class="text-gray-950">${filtered.length} Issues</span><br>Track and manage your project issues</p>
 
 
 </div>
-<div class="flex gap-6">
+<div class="flex gap-6 my-3 md:my-0">
 <p><i class="fa-solid fa-circle text-green-400 align-middle mr-1"></i>open</p>
 <p><i class="fa-solid fa-circle text-purple-400 align-middle mr-1"></i>closed</p>
 </div>
